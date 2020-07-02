@@ -88,6 +88,12 @@ namespace UnderstandingCsharpBasics
             return TightsSeriousnessLvl;
         }
 
-
+        public void PromtsAndChecksLvls()
+        {
+            PromptToIncreaseLvl();
+            CheckTightsSeriousnessLvl();
+            PromptToDecreaseLvl();
+            CheckTightsSeriousnessLvl();
+        }
     }
 }

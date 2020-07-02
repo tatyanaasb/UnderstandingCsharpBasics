@@ -32,46 +32,31 @@ namespace UnderstandingCsharpBasics
             {
                 thorSuper.SuperheroShowAndTell();
                 Console.WriteLine("His power object is " + thorSuper.PowerObject + ". \nHis enemy is " + thorSuper.Enemy + ".");
-                thorSuper.PromptToIncreaseLvl();
-                thorSuper.CheckTightsSeriousnessLvl();
-                thorSuper.PromptToDecreaseLvl();
-                thorSuper.CheckTightsSeriousnessLvl();
+                thorSuper.PromtsAndChecksLvls();
             }
             Superhero wonderWomanSuper = new Superhero("Wonder Woman", "Gliding through the air, strength and senses", "lasso and magical bracelets", "Paula von Gunther", false, 0);
             {
                 wonderWomanSuper.SuperheroShowAndTell();
                 Console.WriteLine("Her power objects are " + wonderWomanSuper.PowerObject + ". \nHer enemy is " + wonderWomanSuper.Enemy + ".");
-                wonderWomanSuper.PromptToIncreaseLvl();
-                wonderWomanSuper.CheckTightsSeriousnessLvl();
-                wonderWomanSuper.PromptToDecreaseLvl();
-                wonderWomanSuper.CheckTightsSeriousnessLvl();
+                wonderWomanSuper.PromtsAndChecksLvls();
             }
             Superhero batmanSuper = new Superhero("Batman", "Fearlessness", "bat widgets", "the Joker", true, 7);
             {
                 batmanSuper.SuperheroShowAndTell();
                 Console.WriteLine("He technically has no powers but in RW thats as close as it gets. \nHis power objects are his " + batmanSuper.PowerObject + ". \nHis enemy is " + batmanSuper.Enemy + ".");
-                batmanSuper.PromptToIncreaseLvl();
-                batmanSuper.CheckTightsSeriousnessLvl();
-                batmanSuper.PromptToDecreaseLvl();
-                batmanSuper.CheckTightsSeriousnessLvl();
+                batmanSuper.PromtsAndChecksLvls();
             }
             Superhero supermanSuper = new Superhero("Superman", "Flying, speed, fire from eyes, super hearing and super strength", "kryptonite and Lex Luther", true, 9);
             {
                 supermanSuper.SuperheroShowAndTell();
                 Console.WriteLine("He does not have an empowering object. \nHis enemy is " + supermanSuper.Enemy + ".");
-                supermanSuper.PromptToIncreaseLvl();
-                supermanSuper.CheckTightsSeriousnessLvl();
-                supermanSuper.PromptToDecreaseLvl();
-                supermanSuper.CheckTightsSeriousnessLvl();
+                supermanSuper.PromtsAndChecksLvls();
             }
             Superhero ironManSuper = new Superhero("Iron Man", "Genious inventor in mechanical engineering and computer science", "super suits", 0);
             {
                 ironManSuper.SuperheroShowAndTell();
                 Console.WriteLine("He technically has no powers without his suits, but being a genious in RW is as close as it gets. \nHis power objects are his " + ironManSuper.PowerObject + ". \nHis enemy is cleaning up his own mess from a time of ignorance.");
-                ironManSuper.PromptToIncreaseLvl();
-                ironManSuper.CheckTightsSeriousnessLvl();
-                ironManSuper.PromptToDecreaseLvl();
-                ironManSuper.CheckTightsSeriousnessLvl();
+                ironManSuper.PromtsAndChecksLvls();
             }
         }
     }
