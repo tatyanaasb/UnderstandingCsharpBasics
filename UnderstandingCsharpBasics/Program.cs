@@ -24,6 +24,13 @@ namespace UnderstandingCsharpBasics
                 munchkinCat.PromptToLoseLife();
                 munchkinCat.CheckLives();
             }
+
+
+            //-----Superhero Class----
+
+            Superhero wonderWomanSuper = new Superhero("Wonder Woman", "gliding through air, strength, senses", "lasso and magical bracelets", "Paula von Gunther", false);
+            Superhero supermanSuper = new Superhero("Superman", "Flies, runs fast, fire from eyes, super hearing and super strength", "Lex Luther", true);
+            Superhero ironManSuper = new Superhero("Iron Man", "super suits", false);
         }
     }
 }

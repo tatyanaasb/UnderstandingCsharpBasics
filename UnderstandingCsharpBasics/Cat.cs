@@ -45,6 +45,9 @@ namespace UnderstandingCsharpBasics
         public int Lives { get; set; }
         public int Age { get; set; }
 
+        public Cat()
+        {
+        }
 
         public Cat(string name, string type, string furColor, int lives, int age)
         {
