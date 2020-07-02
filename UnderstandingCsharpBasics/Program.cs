@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace UnderstandingCsharpBasics
 {
@@ -20,7 +21,6 @@ namespace UnderstandingCsharpBasics
             {
                 Console.WriteLine("Tell us about yourself.");
                 munchkinCat.CatGreeting();
-
                 munchkinCat.PromptToLoseLife();
                 munchkinCat.CheckLives();
             }
@@ -28,9 +28,51 @@ namespace UnderstandingCsharpBasics
 
             //-----Superhero Class----
 
-            Superhero wonderWomanSuper = new Superhero("Wonder Woman", "gliding through air, strength, senses", "lasso and magical bracelets", "Paula von Gunther", false);
-            Superhero supermanSuper = new Superhero("Superman", "Flies, runs fast, fire from eyes, super hearing and super strength", "Lex Luther", true);
-            Superhero ironManSuper = new Superhero("Iron Man", "super suits", false);
+            Superhero thorSuper = new Superhero("Thor", "God of thunder abilities and super strength", "Mjolnir", "Loki", true, 2);
+            {
+                thorSuper.SuperheroShowAndTell();
+                Console.WriteLine("His power object is " + thorSuper.PowerObject + ". \nHis enemy is " + thorSuper.Enemy + ".");
+                thorSuper.PromptToIncreaseLvl();
+                thorSuper.CheckTightsSeriousnessLvl();
+                thorSuper.PromptToDecreaseLvl();
+                thorSuper.CheckTightsSeriousnessLvl();
+            }
+            Superhero wonderWomanSuper = new Superhero("Wonder Woman", "Gliding through the air, strength and senses", "lasso and magical bracelets", "Paula von Gunther", false, 0);
+            {
+                wonderWomanSuper.SuperheroShowAndTell();
+                Console.WriteLine("Her power objects are " + wonderWomanSuper.PowerObject + ". \nHer enemy is " + wonderWomanSuper.Enemy + ".");
+                wonderWomanSuper.PromptToIncreaseLvl();
+                wonderWomanSuper.CheckTightsSeriousnessLvl();
+                wonderWomanSuper.PromptToDecreaseLvl();
+                wonderWomanSuper.CheckTightsSeriousnessLvl();
+            }
+            Superhero batmanSuper = new Superhero("Batman", "Fearlessness", "bat widgets", "the Joker", true, 7);
+            {
+                batmanSuper.SuperheroShowAndTell();
+                Console.WriteLine("He technically has no powers but in RW thats as close as it gets. \nHis power objects are his " + batmanSuper.PowerObject + ". \nHis enemy is " + batmanSuper.Enemy + ".");
+                batmanSuper.PromptToIncreaseLvl();
+                batmanSuper.CheckTightsSeriousnessLvl();
+                batmanSuper.PromptToDecreaseLvl();
+                batmanSuper.CheckTightsSeriousnessLvl();
+            }
+            Superhero supermanSuper = new Superhero("Superman", "Flying, speed, fire from eyes, super hearing and super strength", "kryptonite and Lex Luther", true, 9);
+            {
+                supermanSuper.SuperheroShowAndTell();
+                Console.WriteLine("He does not have an empowering object. \nHis enemy is " + supermanSuper.Enemy + ".");
+                supermanSuper.PromptToIncreaseLvl();
+                supermanSuper.CheckTightsSeriousnessLvl();
+                supermanSuper.PromptToDecreaseLvl();
+                supermanSuper.CheckTightsSeriousnessLvl();
+            }
+            Superhero ironManSuper = new Superhero("Iron Man", "Genious inventor in mechanical engineering and computer science", "super suits", 0);
+            {
+                ironManSuper.SuperheroShowAndTell();
+                Console.WriteLine("He technically has no powers without his suits, but being a genious in RW is as close as it gets. \nHis power objects are his " + ironManSuper.PowerObject + ". \nHis enemy is cleaning up his own mess from a time of ignorance.");
+                ironManSuper.PromptToIncreaseLvl();
+                ironManSuper.CheckTightsSeriousnessLvl();
+                ironManSuper.PromptToDecreaseLvl();
+                ironManSuper.CheckTightsSeriousnessLvl();
+            }
         }
     }
 }
