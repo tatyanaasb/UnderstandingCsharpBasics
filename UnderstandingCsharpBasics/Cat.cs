@@ -58,27 +58,37 @@ namespace UnderstandingCsharpBasics
             Age = age;
         }
 
-        public void CatGreeting()
+        private void CatGreeting()
         {
+            Console.WriteLine("Tell us about yourself.\n");
             Console.WriteLine("I'm " + Name + "! I am " + Type + " type of cat, with "
             + FurColor + " fur. " + "I have " + Lives + " lives left, and I'm " + Age + " years old");
+            Console.WriteLine();
         }
 
-        public void CheckLives()
+        private void CheckLives()
         {
             Console.WriteLine("I have " + this.Lives + " lives left!");
         }
 
-        public int PromptToLoseLife()
+        private int PromptToLoseLife()
         {
             Console.WriteLine("Should " + Name + " lose a life? --Yes? or No?");
             string answer = Console.ReadLine();
 
             if (answer.ToLower().Equals("yes"))
             {
+                Console.WriteLine("Oh Noooooooo  =^._.^=");
                 Lives--;
             }
             return Lives;
+        }
+
+        public void GreetingAndPrompt()
+        {
+            CatGreeting();
+            PromptToLoseLife();
+            CheckLives();
         }
     }
 

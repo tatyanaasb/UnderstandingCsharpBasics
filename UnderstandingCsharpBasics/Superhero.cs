@@ -6,6 +6,7 @@ namespace UnderstandingCsharpBasics
 {
     class Superhero
     {
+        //-------PROPERTIES----
         public string HeroName { get; set; }
         public string Powers { get; set; }
         public string PowerObject { get; set; }
@@ -13,7 +14,7 @@ namespace UnderstandingCsharpBasics
         public bool HasSeriousTights { get; set; }
         public int TightsSeriousnessLvl { get; set; }
 
-
+        //---------CONSTRUCTORS----
         public Superhero()
         {
         }
@@ -45,7 +46,7 @@ namespace UnderstandingCsharpBasics
             TightsSeriousnessLvl = tightsSeriousnessLvl;
         }
 
-
+        //----------METHODS----
         public void SuperheroShowAndTell()
         {
             Console.WriteLine("\n__________________________________________________" +
@@ -53,12 +54,13 @@ namespace UnderstandingCsharpBasics
                 "\nThis is " + HeroName + ". \n" + HeroName + " 's power is: " + Powers + ".");
         }
 
-        public void CheckTightsSeriousnessLvl()
-        {//sorry if anyone ever sees/reads this ... 
+        //umm sorry if anyone ever sees/reads this ... practice is practice 
+        private void CheckTightsSeriousnessLvl()
+        {
             Console.WriteLine("\n" + HeroName + "'s serious superhero tights level is " + this.TightsSeriousnessLvl + "!");
         }
 
-        public int PromptToIncreaseLvl()
+        private int PromptToIncreaseLvl()
         {
             Console.WriteLine("\nWould you like to feed " + HeroName + " healthy food? ---Yes? OR No?");
             string answerLog = Console.ReadLine();
@@ -73,7 +75,7 @@ namespace UnderstandingCsharpBasics
             return TightsSeriousnessLvl;
         }
 
-        public int PromptToDecreaseLvl()
+        private int PromptToDecreaseLvl()
         {
             Console.WriteLine("\nWould you like to feed " + HeroName + " junk food? ---Yes? OR No?");
             string answerLog = Console.ReadLine();

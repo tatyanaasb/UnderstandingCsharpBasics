@@ -9,7 +9,8 @@ namespace UnderstandingCsharpBasics
     {
         static void Main(string[] args)
         {
-            Cat munchkinCat = new Cat("Munchkin", "Scottish Fold", "paterned gray", 4, 20);
+            //------ CAT CLASS------
+            Cat munchkinCat = new Cat("Munchkin", "Scottish Fold", "patterned gray", 4, 10);
             //{
             //    Console.WriteLine(" Tell us about yourself.");
             //    Console.WriteLine("I'm " + munchkinCat.Name + "! I am " + munchkinCat.Type + " type of cat, with "
@@ -19,15 +20,18 @@ namespace UnderstandingCsharpBasics
             //}
             //----above code was condenced into a method and rewritten bellow
             {
-                Console.WriteLine("Tell us about yourself.");
-                munchkinCat.CatGreeting();
-                munchkinCat.PromptToLoseLife();
-                munchkinCat.CheckLives();
+                munchkinCat.GreetingAndPrompt();
+            }
+            Cat munchingMunchkinCat = new Cat("Munching Munchkin", "Scottish Fold", "patterned orange", 8, 3);
+            {
+                munchingMunchkinCat.GreetingAndPrompt();
             }
 
 
-            //-----Superhero Class----
 
+
+
+            //------ SUPERHERO CLASS------
             Superhero thorSuper = new Superhero("Thor", "God of thunder abilities and super strength", "Mjolnir", "Loki", true, 2);
             {
                 thorSuper.SuperheroShowAndTell();
