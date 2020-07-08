@@ -28,7 +28,7 @@ namespace UnderstandingCsharpBasics
             HasSeriousTights = hasSeriousTights;
             TightsSeriousnessLvl = tightsSeriousnessLvl;
         }
-
+        //----extra for practice---
         public Superhero(string heroName, string powers, string enemy, bool hasSeriousTights, int tightsSeriousnessLvl)
         {
             HeroName = heroName;
@@ -37,7 +37,7 @@ namespace UnderstandingCsharpBasics
             HasSeriousTights = hasSeriousTights;
             TightsSeriousnessLvl = tightsSeriousnessLvl;
         }
-
+        //----extra for practice---
         public Superhero(string heroName, string powers, string powerObject, int tightsSeriousnessLvl)
         {
             HeroName = heroName;
@@ -47,14 +47,56 @@ namespace UnderstandingCsharpBasics
         }
 
         //----------METHODS----
-        public void SuperheroShowAndTell()
+        //umm sorry if anyone ever sees/reads this ... practice is practice 
+
+        public void AddSuperhero()
         {
-            Console.WriteLine("\n__________________________________________________" +
-                "\n" +
-                "\nThis is " + HeroName + ". \n" + HeroName + " 's power is: " + Powers + ".");
+            Console.WriteLine("Superheroes name:");
+            string heroName = Console.ReadLine();
+            HeroName = heroName;
+
+            Console.WriteLine($"{HeroName}'s power(s):");
+            string powers = Console.ReadLine();
+            Powers = powers;
+
+            Console.WriteLine($"{HeroName}'s special power object:");
+            string powerObject = Console.ReadLine();
+            PowerObject = powerObject;
+
+            Console.WriteLine($"{HeroName}'s enemy:");
+            string enemy = Console.ReadLine();
+            Enemy = enemy;
+
+            Console.WriteLine($"(True or False) {HeroName} has serious Superhero tights aka rediculous costume with tights?");
+            bool hasSeriousTights = Convert.ToBoolean(Console.ReadLine());
+            HasSeriousTights = hasSeriousTights;
+
+            if (HasSeriousTights == true)
+            {
+                Console.WriteLine($"On a scale of 1-10 enter the level of this Superheroes seriousness of tights.");
+                int tightsSeriousnessLvl = Convert.ToInt32(Console.ReadLine());
+                TightsSeriousnessLvl = tightsSeriousnessLvl;
+            }
         }
 
-        //umm sorry if anyone ever sees/reads this ... practice is practice 
+        public void ShowSuperheroInfoWithID(int counter)
+        {
+            Console.WriteLine($"__________________________________________________\n");
+            Console.WriteLine($"{counter}. This is {HeroName}");
+            Console.WriteLine($"{HeroName}'s power(s): { Powers}");
+            Console.WriteLine($"Special power object: {PowerObject}");
+            Console.WriteLine($"Most known enemy: {Enemy}");
+            if (HasSeriousTights == true)
+            {
+                Console.WriteLine($"This Superhero has some serious Superhero tights!");
+                Console.WriteLine($"Current level/rating of Superhero tights is {TightsSeriousnessLvl}");
+            }
+            else
+            {
+                Console.WriteLine("This Superhero is too cool for tights!");
+            }
+        }
+
         private void CheckTightsSeriousnessLvl()
         {
             Console.WriteLine("\n" + HeroName + "'s serious superhero tights level is " + this.TightsSeriousnessLvl + "!");
@@ -92,10 +134,27 @@ namespace UnderstandingCsharpBasics
 
         public void PromtsAndChecksLvls()
         {
-            PromptToIncreaseLvl();
-            CheckTightsSeriousnessLvl();
-            PromptToDecreaseLvl();
-            CheckTightsSeriousnessLvl();
+            if (HasSeriousTights == true)
+            {
+                PromptToIncreaseLvl();
+                CheckTightsSeriousnessLvl();
+                PromptToDecreaseLvl();
+                CheckTightsSeriousnessLvl();
+            }
+            else
+                Console.WriteLine("This superhero is too cool for tights!");
+        }
+
+
+
+        //METHODS for the manual "hardcoded" Superheroes practice ONLY
+        //Not related to the Menu options
+
+        public void SuperheroShowAndTell()
+        {
+            Console.WriteLine("__________________________________________________" +
+                "\n" +
+                "\nThis is " + HeroName + ". \n" + HeroName + " 's power is: " + Powers + ".");
         }
     }
 }

@@ -78,7 +78,7 @@ namespace UnderstandingCsharpBasics
 
             if (answer.ToLower().Equals("yes"))
             {
-                Console.WriteLine("Oh Noooooooo  =^._.^=");
+                Console.WriteLine("\nOh Noooooooo  =^._.^=\n");
                 Lives--;
             }
             return Lives;
